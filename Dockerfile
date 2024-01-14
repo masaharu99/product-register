@@ -8,4 +8,5 @@ RUN apt-get install -y \
   yarn
 WORKDIR /product-register
 COPY Gemfile Gemfile.lock /product-register/
+RUN bundle lock --add-platform x86_64-linux
 RUN bundle install
