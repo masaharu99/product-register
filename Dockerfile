@@ -1,6 +1,6 @@
 FROM ruby:3.2.2
-RUN apt update
-RUN apt install -y \
+RUN apt-get -o Debug::pkgProblemResolver=yes update
+RUN apt-get -o Debug::pkgProblemResolver=yes install -y \
   build-essential \
   libpq-dev \
   nodejs \
