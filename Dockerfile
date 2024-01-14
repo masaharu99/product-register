@@ -9,5 +9,4 @@ RUN apt-get install -y \
 WORKDIR /product-register
 COPY Gemfile Gemfile.lock /product-register/
 RUN bundle lock --add-platform x86_64-linux
-RUN cat Gemfile.lock
 RUN bundle install
