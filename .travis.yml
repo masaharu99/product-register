@@ -7,6 +7,6 @@ before_install:
 dist: jammy
 
 script:
-  - docker-compose exec -env 'RAILS_ENV=test' web rails db:create
-  - docker-compose exec -env 'RAILS_ENV=test' web rails db:migrate
-  - docker-compose exec -env 'RAILS_ENV=test' web rails test
+  - docker-compose exec -e 'RAILS_ENV=test' web rails db:create
+  - docker-compose exec -e 'RAILS_ENV=test' web rails db:migrate
+  - docker-compose exec -e 'RAILS_ENV=test' web rails test
