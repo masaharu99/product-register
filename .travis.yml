@@ -7,6 +7,7 @@ before_install:
 addons:
   apt:
     update: true
+dist: jammy
 
 script:
   - docker-compose exec -env 'RAILS_ENV=test' web rails db:create
